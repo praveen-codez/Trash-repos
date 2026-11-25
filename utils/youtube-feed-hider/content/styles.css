@@ -1,0 +1,38 @@
+html.yt-focus-active ytd-browse[page-subtype="home"] ytd-rich-grid-renderer,
+html.yt-focus-active ytd-browse[page-subtype="home"] #primary,
+html.yt-focus-active ytd-browse[page-subtype="home"] ytd-two-column-browse-results-renderer {
+    display: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+
+html.yt-focus-active ytd-rich-shelf-renderer[is-shorts],
+html.yt-focus-active ytd-reel-shelf-renderer {
+    display: none !important;
+}
+
+
+html.yt-focus-active ytd-watch-next-secondary-results-renderer,
+html.yt-focus-active #related,
+html.yt-focus-active #secondary-inner {
+    display: none !important;
+}
+
+
+html.yt-focus-active ytd-browse[page-subtype="home"] {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background-color: black;
+}
+
+html.yt-focus-active ytd-browse[page-subtype="home"]::before {
+    content: "Focus Mode Active";
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 500;
+    margin-top: 25vh;
+    font-family: "Roboto", "Arial", sans-serif;
+}

@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "YT Focus",
+  "version": "1.0.0",
+  "description": "Eliminates YouTube homepage distractions to enhance focus.",
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content/content.js"],
+      "css": ["content/styles.css"],
+      "run_at": "document_start"
+    }
+  ]
+}
